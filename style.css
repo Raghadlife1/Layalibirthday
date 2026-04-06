@@ -1,0 +1,177 @@
+/* =============================
+   شاشة القفل
+============================= */
+.lock-screen{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background: linear-gradient(135deg,#6a85ff,#b06ab3);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    z-index:999;
+    transition: all 0.8s ease;
+}
+
+.lock-screen.hide{
+    opacity:0;
+    visibility:hidden;
+}
+
+.lock-screen input{
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    margin:10px;
+    text-align:center;
+}
+
+.lock-screen button{
+    padding:10px 20px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+/* =============================
+   الصفحة الأساسية
+============================= */
+.main-content{
+    padding-top:20px;
+    padding-bottom:40px;
+}
+
+/* =============================
+   الخلفية
+============================= */
+body{
+    margin:0;
+    overflow-x:hidden;
+    font-family:Arial;
+
+    background: linear-gradient(135deg,#74a3ed,#8f76cf,#dd79c0);
+    background-attachment: fixed;
+}
+
+/* =============================
+   طبقة النصوص الخلفية
+============================= */
+#background-text{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:0;
+    overflow:hidden;
+}
+
+/* النص */
+.bg-text{
+    position:absolute;
+    color:rgba(255,255,255,0.15);
+    font-size:28px;
+    animation: move 40s linear infinite;
+    pointer-events:none;
+    
+}
+
+/* حركة النص */
+@keyframes move{
+    0%{ transform:translate(0,0); }
+    50%{ transform:translate(80px,40px); }
+    100%{ transform:translate(0,0); }
+}
+
+/* =============================
+   الفيديوهات
+============================= */
+.videos-layout{
+    position:fixed;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+
+    
+    z-index:2;
+}
+
+/* الفيديو الكبير */
+.main-video{
+    width:95%;
+    max-width:450px;
+    aspect-ratio: 16/9;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.4);
+}
+
+/* الفيديوهات الصغيرة */
+.small{
+    width:70%;
+    max-width:220px;
+    aspect-ratio: 19/21;
+    
+    border-radius:10px;
+    object-fit:cover;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Hover */
+video:hover{
+    transform:scale(1.05);
+    transition:0.3s;
+}
+
+/* =============================
+   الصور
+============================= */
+.corner{
+    position:fixed;
+    width:200px;
+    height:260px;
+    object-fit:cover;
+    border-radius:15px;
+    box-shadow:0 12px 30px rgba(0,0,0,0.4);
+
+    z-index:1;
+    opacity:0.9;
+
+    animation: floatImg 3s ease-in-out infinite alternate;
+    transition:0.3s;
+}
+
+.corner:hover{
+    transform:scale(1.05);
+}
+
+/* المواقع */
+.top-left{ top:5%; left:5%; }
+.top-right{ top:5%; right:5%; }
+.bottom-left{ bottom:5%; left:5%; }
+.bottom-right{ bottom:5%; right:5%; }
+
+/* حركة الصور */
+@keyframes floatImg{
+    from{ transform:translateY(0); }
+    to{ transform:translateY(-10px); }
+}
+
+/* =============================
+   الجوال
+============================= */
+@media (max-width:600px){
+
+    .videos-layout{
+        gap:10px;
+    }
+}
