@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layali's Happy Birthday 🎉</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- شاشة القفل -->
+<div class="lock-screen">
+    <h2>🎁 Enter the Secret Code 🎁</h2>
+
+    <input type="text" id="codeInput" placeholder="Write your Date of Birth">
+
+    <button onclick="checkCode()">Open</button>
+
+    <p id="error"></p>
+</div>
+
+<!-- الصفحة الأساسية -->
+<div id="mainContent" class="main-content">
+
+
+<!-- الخلفية المتحركة -->
+<div id="background-text"></div>
+
+<!-- iالفيديوهات!-->
+<div class="videos-layout">
+
+    <video class="small" src="video-top.mp4" controls></video>
+
+    <iframe class="main-video" width="560" height="315" 
+      src="https://www.youtube.com/embed/93wwT03eIkA" 
+      frameborder="0" 
+      allowfullscreen>
+    </iframe>
+
+    <video class="small" src="video-bottom.mp4" controls></video>
+   
+</div>
+<img src="imge1.jpeg" class="corner top-left">
+
+<img src="imge2.jpeg" class="corner top-right">
+
+<img src="imge3.jpeg" class="corner bottom-left">
+
+<img src="imge4.jpeg" class="corner bottom-right">
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
